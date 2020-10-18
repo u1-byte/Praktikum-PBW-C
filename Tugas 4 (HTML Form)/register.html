@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Tugas 4 - Form HTML</title>
+    </head>
+
+    <body>
+
+        <header>
+            <div class="titlebar">
+                <h1> Daftar Kuy </h1>
+                <p> Ceritanya ini web buat login sama register yak. </p>
+            </div>
+            <nav>
+                <div class="navbar">
+                    <a class="home" href="index.html">Home</a>
+                    <a class="menu" href="register.html">Register</a>
+                    <a class="menu" href="login.html">Login</a>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <div id="desc" class="content">
+                <h2>Register Form</h2>
+                <div>
+                    <p>
+                        Daftar dulu disini.
+                    </p>
+                    <form action="thankyou.html" autocomplete="off">
+                        <!-- First Name & Last Name -->
+                        <label for="name">Nama :</label> <br>
+                        <input type="text" id="name" name="fname" placeholder="Nama depan" size="22">
+                        <input type="text" id="name" name="lname" placeholder="Nama belakang" size="22"> <br> <br>
+                        
+                        <!-- Username -->
+                        <label for="username">Username :</label> <br>
+                        <input type="text" id="username" name="username" placeholder="Username (Maks. 6 karakter)" maxlength="6" size="50"> <br> <br>
+
+                        <!-- Email -->
+                        <label for="email">Email :</label> <br>
+                        <input type="text" id="email" name="email" placeholder="Email" size="50"> <br> <br>
+
+                        <!-- Password -->
+                        <label for="pwd">Password :</label> <br>
+                        <input type="password" id="pwd" name="pwd" placeholder="Password (Terdiri dari 8 - 12 karakter alphanumeric)" maxlength="12" size="50"> <br> <br>
+
+                        <!-- Gender -->
+                        <label for="gender">Jenis Kelamin :</label> <br>
+                        <input type="radio" id="male" name="gender" value="male">
+                        <label for="male">Male</label>
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">Female</label>
+                        <input type="radio" id="othergen" name="gender" value="othergen">
+                        <label for="othergen">Lainnya</label> <br> <br>
+
+                        <!-- Learning Path -->
+                        <label for="path">Jalur Pembelajaran yang Dipilih :</label> <br>
+                        <select name="path" id="path">
+                            <option value="andro">Android Development</option>
+                            <option value="web">Web Development</option>
+                            <option value="data" selected>Data Science</option>
+                            <option value="design">Design UI/UX</option>
+                        </select>
+                        <br><br>
+
+                        <!-- Understanding -->
+                        <label for="path_u">Pemahaman Tentang Jalur yang Dipilih (1 (Tidak Paham) - 5 (Sangat Paham)) :</label>
+                        <input type="number" id="path_u" name="path_u" min="1" max="5">
+                        <br> <br>
+
+                        <!-- Programming Language -->
+                        <label for="lang">Bahasa Pemrograman yang Dikuasai :</label><br>
+                        <input type="checkbox" id="c" name="lang" value="C">
+                        <label for="c">C</label><br>
+                        <input type="checkbox" id="cpp" name="lang" value="C++">
+                        <label for="cpp">C++</label><br>
+                        <input type="checkbox" id="python" name="lang" value="Python">
+                        <label for="python">Python</label><br>
+                        <input type="checkbox" id="r" name="lang" value="R">
+                        <label for="r">R</label><br>
+                        <input type="checkbox" id="java" name="lang" value="Java">
+                        <label for="java">Java</label><br>
+                        <input type="checkbox" id="kotlin" name="lang" value="Kotlin">
+                        <label for="kotlin">Kotlin</label><br>
+                        <input type="checkbox" id="php" name="lang" value="PHP">
+                        <label for="php">PHP</label><br>
+                        <input type="checkbox" id="js" name="lang" value="Javascript">
+                        <label for="js">Javascript</label><br>
+                        <input type="checkbox" id="otherlang" name="lang" value="otherlang">
+                        <label for="otherlang">Lainnya</label>
+                        <br> <br>
+
+                        <!-- Portfolio -->
+                        <label for="pt">Upload Portfolio :</label> <br>
+                        <input type="file" id="pt" name="pt"><br><br>
+
+                        <!-- Notes -->
+                        <label for="note">Tambahan :</label><br>
+                        <textarea name="note" id="note" cols="50" rows="15" placeholder="Tambahkan kata - kata (Maks. 30 kata)"></textarea>
+                        <br><br>
+
+                        <input type="submit" value="Register">
+                        <input type="reset">
+                    </form>            
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Tugas 4 - Form HTML &#169; 2020, 1808561059</p>
+        </footer>
+    </body>
+</html>

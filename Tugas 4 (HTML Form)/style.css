@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Overpass&display=swap');
+
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+
+  header {
+    top: 0;
+    position: fixed;
+    width: 100%;
+    background-color: #00071a;
+  }
+
+  h1 {
+    font-family: 'Spartan', sans-serif;
+    font-size: 30px;
+  }
+
+  h2 {
+    text-align: center;
+    font-family: 'Signika', sans-serif;
+    border: 3px solid black;
+    background-color: #1873a1;
+    color: whitesmoke;
+  }
+
+  .titlebar {
+    text-align: center;
+    color: #ffde00;
+  }
+
+  nav{
+    text-align: center;
+  }
+
+  .navbar {  
+    width: 100%;
+    top: 7.5em;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  .navbar a {
+    display: inline-block;
+    text-decoration: none;
+    color: whitesmoke;
+    background-color: #1873a1;
+    padding: 15px;
+    border: 1px solid black;
+  }
+
+  .navbar a:hover {
+    color: #ffb900;
+  }
+
+  body {
+    margin: 0;
+    font-family: "Overpass", sans-serif;
+    background-color: #1237a1;
+  }
+
+  footer {
+    width: 100%;
+    text-align: center;
+    color: whitesmoke;
+    font-size: 12px;
+    font-family: 'Spartan', sans-serif;
+  }
+  
+  main {
+    padding: 50px 200px;
+    margin-top: 8em;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 50px;
+    margin-top: 30px;
+    background-color: whitesmoke;
+  }
+
+  
+  @media screen and (max-width: 1000px) {
+    .navbar a {
+      display: block;
+      text-align: center;
+    }
+    main {
+      padding: 50px;
+      margin-top: 14em;
+    }
+  }

@@ -1,6 +1,5 @@
 <script src='https://cdn.jsdelivr.net/npm/sweetalert2@10'></script>
 <?php 
-    include "index.php";
     if(isset($_POST['login'])){
         include "koneksi.php";
 
@@ -16,9 +15,12 @@
         
         if($res_level == 1){
             session_start();
+            $_SESSION['id'] = $res_id;
             $_SESSION['nim'] = $res_nim;
             $_SESSION['nama'] = $res_nama;
-            echo "<script>
+            $_SESSION['level'] = $res_level;
+            echo "<div></div>
+            <script>
             Swal.fire({
                 icon: 'success',
                 title: 'Sukses!',
@@ -31,9 +33,12 @@
 
         else if($res_level == 2) {
             session_start();
+            $_SESSION['id'] = $res_id;
             $_SESSION['nim'] = $res_nim;
             $_SESSION['nama'] = $res_nama;
-            echo "<script>
+            $_SESSION['level'] = $res_level;
+            echo "<div></div>
+            <script>
             var nim = '$res_nim';
             Swal.fire({
                 icon: 'success',
@@ -46,7 +51,8 @@
         }
 
         else{
-            echo "<script>
+            echo "<div></div>
+            <script>
             Swal.fire({
                 icon: 'error',
                 title: 'Gagal!',

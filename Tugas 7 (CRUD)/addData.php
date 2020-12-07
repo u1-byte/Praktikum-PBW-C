@@ -1,6 +1,6 @@
 <script src='https://cdn.jsdelivr.net/npm/sweetalert2@10'></script>
 <?php
-    if(isset($_POST['register'])){
+    if(isset($_POST['insert'])){
         include 'koneksi.php';
 
         $uname = $_POST['username'];
@@ -21,12 +21,13 @@
         if (mysqli_query($koneksi, $query)){
             echo "<div></div>
             <script>
+            var nim = '$nim';
             Swal.fire({
                 icon: 'success',
-                title: 'Registrasi Sukses!',
-                text: 'Silakan login untuk melanjutkan!'
+                title: 'Berhasil Menambahkan Data!',
+                text: 'Tambah data NIM ' + nim + ' ke database.'
             }).then(function() {
-                window.location='index.php';
+                window.location='admin.php';
             });
             </script>";
         }
@@ -36,9 +37,9 @@
             Swal.fire({
                 icon: 'error',
                 title: 'Gagal!',
-                text: 'Gagal regis, silakan coba lagi!'
+                text: 'Gagal tambah data, silakan coba lagi!'
             }).then(function() {
-                window.location='index.php';
+                window.location='admin.php';
             });
             </script>";
         };

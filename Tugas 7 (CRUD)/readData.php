@@ -24,12 +24,12 @@
             <td>' . $res['alamat'] . '</td>
             ' . ($level == 1 ? '
             <td>
-                <a id="edit" name="edit" href="editData.php?id=' . $res['id'] . '" class="btn btn-warning btn-md mx-2">Edit</a>
+                <a id="edit" name="edit" href="admin.php?id=' . $res['id'] . '" class="btn btn-warning btn-md mx-2">Edit</a>
                 <a id="delete" name="delete" href="deleteData.php?id=' . $res['id'] . '" class="btn btn-danger btn-md mx-2">Delete</a>
             </td>' : '') . '
             ' . ($level == 2 && $id == $res['id'] ? '
             <td>
-                <a id="edit" name="edit" href="editData.php?id=' . $res['id'] . '" class="btn btn-warning btn-md mx-2">Edit</a>
+                <a id="edit" name="edit" href="guest.php?id=' . $res['id'] . '" class="btn btn-warning btn-md mx-2">Edit</a>
             </td>' : '') . '
             </tr>
         </tbody>

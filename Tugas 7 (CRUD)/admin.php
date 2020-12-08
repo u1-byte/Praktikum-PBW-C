@@ -46,11 +46,12 @@
     <div class="col-md-6 mx-auto my-5">
         <div class="card">
             <h2 class="my-2 mx-2">Halaman Admin</h2>
-            <p class="my-2 mx-2">Halo admin <?php echo $nama; ?> dengan nim <?php echo $nim; ?> !</p>
+            <p class="my-2 mx-2">Halo admin NIM <?php echo $nim; ?> !</p>
             <input id="add" name="add" type="submit" class="btn col-3 btn-sm btn-outline-success mx-2 mb-3" value="Add Data">
         
             <?php 
                 include 'readData.php';
+                include 'editData.php';
             ?>
         </div>
 
@@ -67,12 +68,6 @@
     .getElementById("add")
     .addEventListener("click", (MouseEvent) => {
         addData();
-    });
-
-    var editbutton = document
-    .getElementById("edit")
-    .addEventListener("click", (MouseEvent) => {
-        editData();
     });
 
     function addData() {
@@ -106,44 +101,6 @@
                         <div class="form-group">
                             <input name="reset" type="reset" class="btn btn-danger btn-md float-right mx-2" value="Reset">
                             <input name="insert" type="submit" class="btn btn-success btn-md float-right mx-2" value="Insert">
-                        </div>
-                    </form>
-                </div>
-            </div>
-        `;
-    }
-
-    function editData() {
-        card.innerHTML = `
-            <div class="card mt-4">
-                <div class="card-header">
-                    <h3 class="mb-0 my-2">Edit Data Form</h3>
-                </div>
-                <div class="card-body">
-                    <form class="form" role="form" autocomplete="off" method="POST" action="editData.php">
-                        <div class="form-group">
-                            <label for="username">Username</label>
-                            <input type="text" class="form-control" name="username" id="username" placeholder="masukkan username" required="" value=>
-                        </div>
-                        <div class="form-group">
-                            <label for="password">Password</label>
-                            <input type="password" class="form-control" name="password" id="password" placeholder="masukkan password" required="">
-                        </div>
-                        <div class="form-group">
-                            <label for="nim">NIM</label>
-                            <input type="text" class="form-control" id="nim" name="nim" placeholder="masukkan nim" required="" disabled>
-                        </div>
-                        <div class="form-group">
-                            <label for="nama">Nama</label>
-                            <input type="text" class="form-control" id="nama" name="nama" placeholder="masukkan nama" required="">
-                        </div>
-                        <div class="form-group">
-                            <label for="alamat">Alamat</label>
-                            <input type="text" class="form-control" id="alamat" name="alamat" placeholder="masukkan alamat" required="">
-                        </div>
-                        <div class="form-group">
-                            <input name="reset" type="reset" class="btn btn-danger btn-md float-right mx-2" value="Reset">
-                            <input name="save" type="submit" class="btn btn-success btn-md float-right mx-2" value="Save">
                         </div>
                     </form>
                 </div>
